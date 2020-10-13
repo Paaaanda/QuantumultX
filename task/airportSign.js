@@ -11,8 +11,9 @@ const info = [
 function task() {
     for (let i = 0; i < info.length; i++) {
         const item = info[i];
-        login(item);
-
+        setTimeout(() => {
+            login(item);
+        }, i == 0 ? 0 : 3000);
     }
 }
 function login(data) {
